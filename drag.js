@@ -13,6 +13,10 @@ function drag(id){
             obj.style.left=ev.clientX-disX+"px";
             obj.style.top=ev.clientY-disY+"px";
         }
+        document.onmouseup=function(ev){
+            document.onmousemove=null;
+            document.onmouseup=null;
+        }
     }
-
+    return false;
 }
